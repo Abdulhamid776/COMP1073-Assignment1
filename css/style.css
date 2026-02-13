@@ -129,3 +129,8 @@ body {
     text-align: center;
     font-weight: bold;
 }
+
+.generate-btn {
+    margin: 5px;
+}
+
