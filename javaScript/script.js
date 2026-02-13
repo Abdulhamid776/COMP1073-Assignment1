@@ -23,9 +23,7 @@ let currentSet = storySet1;
 let indexes = [0,0,0,0,0];
 let selections = ["","","","",""];
 
-/* =============================
-   BUTTON CYCLING
-   ============================= */
+
 
 for (let i = 0; i < 5; i++) {
     document.getElementById("part" + (i+1)).addEventListener("click", function() {
@@ -35,9 +33,7 @@ for (let i = 0; i < 5; i++) {
     });
 }
 
-/* =============================
-   MANUAL GENERATE
-   ============================= */
+
 
 document.getElementById("generate").addEventListener("click", function() {
 
@@ -52,9 +48,7 @@ document.getElementById("generate").addEventListener("click", function() {
     displayStory(sentence);
 });
 
-/* =============================
-   RANDOM GENERATE
-   ============================= */
+// this to generate random value between 0 to 5
 
 document.getElementById("random").addEventListener("click", function() {
 
@@ -68,9 +62,7 @@ document.getElementById("random").addEventListener("click", function() {
     displayStory(sentence);
 });
 
-/* =============================
-   RESET
-   ============================= */
+//this to initialising reset buttom 
 
 document.getElementById("reset").addEventListener("click", function() {
 
@@ -84,9 +76,7 @@ document.getElementById("reset").addEventListener("click", function() {
     document.getElementById("output").textContent = "";
 });
 
-/* =============================
-   SWITCH STORY MODE
-   ============================= */
+//this to generate storybook
 
 document.getElementById("mode").addEventListener("click", function() {
 
@@ -104,18 +94,16 @@ document.getElementById("mode").addEventListener("click", function() {
     document.getElementById("reset").click();
 });
 
-/* =============================
-   DISPLAY + SPEAK
-   ============================= */
+
+// this to DISPLAY + SPEAK functionallty
 
 function displayStory(sentence) {
     document.getElementById("output").textContent = sentence;
     speak(sentence);
 }
 
-/* =============================
-   TEXT TO SPEECH
-   ============================= */
+
+// this to TEXT TO SPEECH functionallty
 
 function speak(text) {
     const speech = new SpeechSynthesisUtterance(text);
